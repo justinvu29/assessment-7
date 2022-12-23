@@ -1,0 +1,40 @@
+Results for the extraLargeArray
+insert 1.05798675 s
+append 4.024792 ms
+
+Results for the tinyArray
+insert 35 μs
+append 123.625 μs
+
+Results for the smallArray
+insert 64.458 μs
+append 132 μs
+
+Results for mediumArray
+insert 366 μs
+append 218 μs
+
+Results for the largeArray
+insert 22.447625 ms
+append 1.099292 ms
+
+1. Read over the results, and write a paragraph that explains the pattern you see. How does each function “scale”? Which of the two functions scales better? How can you tell?
+
+The insert operation takes much longer to run than the append operation on all of the arrays. The difference in runtime is more obvious as the size of the array increases.
+For example, on the extraLargeArray the insert operation is 262 times larger if you compare the two times of the functions. 
+The difference in runtime between the insert and append functions are because of the way that these operations modify the array. The insert operation requires shifting all of the elements in the array after the insertion point to make room for the new element, and the append operation only requires adding the new element to the end of the array. So as the size of the array increases, the time it takes to shift each element of the array increases the total runtime by much more.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
